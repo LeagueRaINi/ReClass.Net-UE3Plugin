@@ -1,0 +1,3 @@
+[submodule "UE3Plugin/UE3Plugin/dep/ReClass.NET"]
+	path = UE3Plugin/UE3Plugin/dep/ReClass.NET
+	url = https://github.com/ReClassNET/ReClass.NET.git
