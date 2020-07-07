@@ -11,6 +11,16 @@ namespace UE3Plugin.Utils
         /// <summary>
         /// Parses a pattern to a byte array.
         /// </summary>
+        /// <example>
+        /// Supported pattern structures:
+        ///     with capture group:
+        ///         "E8 [....] 48 83 CB FF 45 85 F6"
+        ///         "E8 (....) 48 83 CB FF 45 85 F6"
+        ///     without:
+        ///         "E8 .... 48 83 CB FF 45 85 F6"
+        ///         "E8 ? ? ? ? 48 83 CB FF 45 85 F6"
+        ///         "E8 ?? ?? ?? ?? 48 83 CB FF 45 85 F6"
+        /// </example>
         /// <param name="pattern">The pattern.</param>
         /// <param name="offset">The offset.</param>
         static List<byte?> ParsePattern(string pattern, out int offset)
