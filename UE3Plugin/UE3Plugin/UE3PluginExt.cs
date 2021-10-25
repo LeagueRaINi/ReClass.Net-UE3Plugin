@@ -70,9 +70,9 @@ namespace UE3Plugin
                 {
                     Game = GameType.RocketLeague;
 
-                    var namesPtr = PatternScanner.Search(sender, mainModule, "E8 [....] 48 83 CF FF 45 85 FF", (bytes, address) =>
+                    var namesPtr = PatternScanner.Search(sender, mainModule, "E8 [....] 48 C7 C7", (bytes, address) =>
                     {
-                        address += BitConverter.ToInt32(bytes, address) + 0x4  + 0x2c;
+                        address += BitConverter.ToInt32(bytes, address) + 0x4  + 0x2f;
                         address += BitConverter.ToInt32(bytes, address  + 0x3) + 0x7;
                         return address;
                     });
